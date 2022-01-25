@@ -35,9 +35,16 @@ const useStyles = makeStyles({
   links: {
     display: 'flex',
     justifyContent: 'space-between',
+    flexWrap: 'wrap',
   },
   verticalDiv: {
     display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+  },
+  verticalDivContent: {
+    display: 'flex',
+    paddingLeft: '10px',
     flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'space-between',
@@ -72,31 +79,51 @@ function Footer() {
         <div className={classes.links}>
           <div className={classes.verticalDiv}>
             <Typography className={classes.footerTextSubtitle}>Accès rapide</Typography>
-            <SecondaryButton sx={{ margin: '0', padding: '0' }} component={Link} to="/home">Accueil</SecondaryButton>
-            <SecondaryButton sx={{ margin: '0', padding: '0' }} component={Link} to="/services">Prestations</SecondaryButton>
-            <SecondaryButton sx={{ margin: '0', padding: '0' }} component={Link} to="/realizations">Réalisations</SecondaryButton>
-            <SecondaryButton sx={{ margin: '0', padding: '0' }} component={Link} to="/contact">Contact</SecondaryButton>
+            <div className={classes.verticalDivContent}>
+              <SecondaryButton sx={{ margin: '0', padding: '0', justifyContent: 'flex-start' }} component={Link} to="/accueil">
+                Accueil
+              </SecondaryButton>
+              <SecondaryButton sx={{ margin: '0', padding: '0', justifyContent: 'flex-start' }} component={Link} to="/prestations">
+                Prestations
+              </SecondaryButton>
+              <SecondaryButton sx={{ margin: '0', padding: '0', justifyContent: 'flex-start' }} component={Link} to="/realisations">
+                Réalisations
+              </SecondaryButton>
+              <SecondaryButton sx={{ margin: '0', padding: '0', justifyContent: 'flex-start' }} component={Link} to="/contact">
+                Contact
+              </SecondaryButton>
+            </div>
           </div>
           <div className={classes.verticalDiv}>
             <div>
               <Typography className={classes.footerTextSubtitle}>Contactez-nous</Typography>
-              <Typography sx={{ margin: '5px 0' }} className={classes.footerText}>
-                <Phone sx={{ marginBottom: '-7px' }} />
-                &nbsp;&nbsp;07 70 73 69 79
-              </Typography>
-              <Typography sx={{ margin: '5px 0' }} className={classes.footerText}>
-                <Mail sx={{ marginBottom: '-7px' }} />
-                &nbsp;&nbsp;mb.reno@orange.fr
-              </Typography>
+              <div className={classes.verticalDivContent}>
+                <Typography className={classes.footerText}>
+                  <Phone sx={{ marginBottom: '-7px' }} />
+                  &nbsp;&nbsp;07 70 73 69 79
+                </Typography>
+                <Typography className={classes.footerText}>
+                  <Mail sx={{ marginBottom: '-7px' }} />
+                  &nbsp;&nbsp;mb.reno@orange.fr
+                </Typography>
+              </div>
             </div>
             <div>
               <Typography sx={{ marginTop: '5px' }} className={classes.footerTextSubtitle}>Horaires</Typography>
-              <Typography sx={{ margin: '5px 0' }} className={classes.footerText}>Du lundi au vendredi</Typography>
-              <Typography sx={{ margin: '5px 0' }} className={classes.footerText}>De 8h à 19h</Typography>
+              <div className={classes.verticalDivContent}>
+                <Typography className={classes.footerText}>Du lundi au vendredi</Typography>
+                <Typography className={classes.footerText}>De 8h à 19h</Typography>
+              </div>
             </div>
           </div>
           <div className={classes.verticalDiv}>
             <Typography className={classes.footerTextSubtitle}>Mentions légales</Typography>
+            <div className={classes.verticalDivContent}>
+              <SecondaryButton sx={{ margin: '0', padding: '0', justifyContent: 'flex-start' }} component={Link} to="/cgu">CGU</SecondaryButton>
+              <SecondaryButton sx={{ margin: '0', padding: '0', justifyContent: 'flex-start' }} component={Link} to="/politique-de-confidentialite">
+                Confidentialité
+              </SecondaryButton>
+            </div>
           </div>
         </div>
         <StyledDivider flexItem />

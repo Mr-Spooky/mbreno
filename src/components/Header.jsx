@@ -45,7 +45,7 @@ export default function Header() {
 
   return (
     <div className={`${classes.header} ${width < 800 ? classes.headerMobile : classes.headerWeb}`}>
-      <MuiLink className={classes.logoLink} component={Link} to="/home">
+      <MuiLink className={classes.logoLink} component={Link} to="/accueil">
         <img className={`${classes.logo} ${width < 800 && classes.logoMobile}`} src="/logo.png" alt="logo" />
       </MuiLink>
       {
@@ -53,9 +53,9 @@ export default function Header() {
           : (
             <>
               <div>
-                <SecondaryButton component={Link} to="/home">Accueil</SecondaryButton>
-                <SecondaryButton component={Link} to="/services">Prestations</SecondaryButton>
-                <SecondaryButton component={Link} to="/realizations">Réalisations</SecondaryButton>
+                <SecondaryButton component={Link} to="/accueil">Accueil</SecondaryButton>
+                <SecondaryButton component={Link} to="/prestations">Prestations</SecondaryButton>
+                <SecondaryButton component={Link} to="/realisations">Réalisations</SecondaryButton>
               </div>
               <PrimaryButton component={Link} to="/contact" variant="filled">Contactez-nous</PrimaryButton>
             </>

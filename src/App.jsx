@@ -9,6 +9,8 @@ import Realizations from './pages/Realizations';
 import Services from './pages/Services';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import Cgu from './pages/Cgu';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 const useStyles = makeStyles({
   root: {
@@ -28,14 +30,16 @@ function App() {
         <Header />
         <div className={classes.body}>
           <Routes>
-            <Route path="/realizations" element={<Realizations />} exact />
-            <Route path="/realizations/*" element={<Navigate replace to="/realizations" />} />
-            <Route path="/services" element={<Services />} exact />
-            <Route path="/services/*" element={<Navigate replace to="/services" />} />
+            <Route path="/cgu" element={<Cgu />} exact />
+            <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} exact />
+            <Route path="/realisations" element={<Realizations />} exact />
+            <Route path="/realisations/*" element={<Navigate replace to="/realisations" />} />
+            <Route path="/prestations" element={<Services />} exact />
+            <Route path="/prestations/*" element={<Navigate replace to="/prestations" />} />
             <Route path="/contact" element={<Contact />} exact />
             <Route path="/contact/*" element={<Navigate replace to="/contact" />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="*" element={<Navigate replace to="/home" />} />
+            <Route path="/accueil" element={<Home />} />
+            <Route path="*" element={<Navigate replace to="/accueil" />} />
           </Routes>
         </div>
         <Footer />
