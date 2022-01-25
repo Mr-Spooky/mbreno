@@ -18,6 +18,8 @@ const useStyles = makeStyles({
   },
   body: {
     marginTop: '75px',
+    display: 'flex',
+    justifyContent: 'center',
   },
 });
 

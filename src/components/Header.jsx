@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     width: '100%',
     height: '75px',
     backgroundColor: 'black',
+    zIndex: 1000,
   },
   headerWeb: {
     justifyContent: 'space-around',

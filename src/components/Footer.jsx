@@ -4,7 +4,9 @@ import { makeStyles } from '@mui/styles';
 import {
   Typography, Divider, Link as MuiLink, styled,
 } from '@mui/material';
-import { LinkedIn, Mail, Phone } from '@mui/icons-material';
+import {
+  Facebook, Instagram, LinkedIn, Mail, Phone,
+} from '@mui/icons-material';
 import PrimaryButton, { SecondaryButton } from './Buttons';
 
 const StyledDivider = styled(Divider)({
@@ -18,7 +20,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     width: '100%',
     backgroundColor: 'black',
-    paddingTop: '50px',
+    paddingTop: '30px',
   },
   footerContent: {
     width: '100%',
@@ -41,6 +43,7 @@ const useStyles = makeStyles({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
+    marginTop: '20px',
   },
   verticalDivContent: {
     display: 'flex',
@@ -114,6 +117,17 @@ function Footer() {
                 <Typography className={classes.footerText}>Du lundi au vendredi</Typography>
                 <Typography className={classes.footerText}>De 8h à 19h</Typography>
               </div>
+            </div>
+          </div>
+          <div className={classes.verticalDiv}>
+            <Typography className={classes.footerTextSubtitle}>Réseaux Sociaux</Typography>
+            <div>
+              <MuiLink href="https://www.facebook.com/MB-r%C3%A9no-108757878227209" target="_blank">
+                <Facebook className={classes.linkedIn} fontSize="large" />
+              </MuiLink>
+              <MuiLink href="https://www.instagram.com/mb.reno/?hl=fr" target="_blank">
+                <Instagram className={classes.linkedIn} fontSize="large" />
+              </MuiLink>
             </div>
           </div>
           <div className={classes.verticalDiv}>
