@@ -84,15 +84,15 @@ function MobileHeader() {
           </StyledIconButton>
           <img className={classes.logo} src="logo.png" alt="logo" />
           <div className={classes.buttons}>
-            <MobileNavButton component={Link} to="/home" onClick={handleButtonClick}>
+            <MobileNavButton component={Link} to="/accueil" onClick={handleButtonClick}>
               <Home sx={{ color: '#F39200', marginTop: '-5px' }} />
               &nbsp;&nbsp;&nbsp;Accueil
             </MobileNavButton>
-            <MobileNavButton component={Link} to="/services" onClick={handleButtonClick}>
+            <MobileNavButton component={Link} to="/prestations" onClick={handleButtonClick}>
               <Construction sx={{ color: '#F39200', marginTop: '-5px' }} />
               &nbsp;&nbsp;&nbsp;Prestations
             </MobileNavButton>
-            <MobileNavButton component={Link} to="/realizations" onClick={handleButtonClick}>
+            <MobileNavButton component={Link} to="/realisations" onClick={handleButtonClick}>
               <Collections sx={{ color: '#F39200', marginTop: '-5px' }} />
               &nbsp;&nbsp;&nbsp;Réalisations
             </MobileNavButton>
