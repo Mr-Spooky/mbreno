@@ -5,6 +5,10 @@ import { styled, TextField } from '@mui/material';
 const PrimaryTextfieldStyled = styled(TextField)({
   marginTop: '12px',
   minWidth: '300px',
+  '& :-webkit-autofill': {
+    '-webkit-transition': 'color 9999s ease-out, background-color 9999s ease-out',
+    '-webkit-transition-delay': '9999s',
+  },
   '& .MuiInputBase-root': {
     color: 'white',
   },
@@ -28,7 +32,8 @@ const PrimaryTextfieldStyled = styled(TextField)({
 });
 
 function PrimaryTextfield({
-  value, name, onChange, required, label, maxLength, type, sx, multiline,
+  value, name, onChange, required, label, maxLength, type, sx, multiline, minRows,
+  error,
 }) {
   return (
     <PrimaryTextfieldStyled
@@ -42,6 +47,8 @@ function PrimaryTextfield({
       variant="outlined"
       inputProps={{ maxLength }}
       multiline={multiline}
+      minRows={minRows}
+      error={error}
     />
   );
 }
@@ -56,6 +63,8 @@ PrimaryTextfield.propTypes = {
   type: PropTypes.string,
   sx: PropTypes.instanceOf(Object),
   multiline: PropTypes.bool,
+  minRows: PropTypes.number,
+  error: PropTypes.bool,
 };
 
 PrimaryTextfield.defaultProps = {
@@ -64,6 +73,8 @@ PrimaryTextfield.defaultProps = {
   type: 'text',
   sx: {},
   multiline: false,
+  minRows: 0,
+  error: false,
 };
 
 export default PrimaryTextfield;
