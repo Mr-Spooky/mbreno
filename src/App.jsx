@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Cgu from './pages/Cgu';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import ScrollToTop from './components/ScrollToTop';
 
 const useStyles = makeStyles({
   root: {
@@ -18,6 +19,8 @@ const useStyles = makeStyles({
   },
   body: {
     marginTop: '75px',
+    display: 'flex',
+    justifyContent: 'center',
   },
 });
 
@@ -28,6 +31,7 @@ function App() {
     <Router>
       <div className={classes.root}>
         <Header />
+        <ScrollToTop />
         <div className={classes.body}>
           <Routes>
             <Route path="/cgu" element={<Cgu />} exact />

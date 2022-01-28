@@ -14,6 +14,7 @@ const useStyles = makeStyles({
     width: '100%',
     height: '75px',
     backgroundColor: 'black',
+    zIndex: 1000,
   },
   headerWeb: {
     justifyContent: 'space-around',
@@ -46,7 +47,7 @@ export default function Header() {
   return (
     <div className={`${classes.header} ${width < 800 ? classes.headerMobile : classes.headerWeb}`}>
       <MuiLink className={classes.logoLink} component={Link} to="/accueil">
-        <img className={`${classes.logo} ${width < 800 && classes.logoMobile}`} src="/logo.png" alt="logo" />
+        <img className={`${classes.logo} ${width < 800 && classes.logoMobile}`} src="./images/logos/logo.png" alt="logo" />
       </MuiLink>
       {
         width < 800 ? <MobileHeader />
