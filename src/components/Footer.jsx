@@ -2,17 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
 import {
-  Typography, Divider, Link as MuiLink, styled,
+  Typography, Link as MuiLink,
 } from '@mui/material';
 import {
   Facebook, Instagram, LinkedIn, Mail, Phone,
 } from '@mui/icons-material';
 import PrimaryButton, { SecondaryButton } from './Buttons';
-
-const StyledDivider = styled(Divider)({
-  backgroundColor: '#F39200',
-  margin: '20px 0',
-});
+import StyledDivider from './MuiComponents';
 
 const useStyles = makeStyles({
   footer: {

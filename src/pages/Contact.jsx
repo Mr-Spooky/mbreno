@@ -16,7 +16,7 @@ const useStyles = makeStyles({
   },
   content: {
     display: 'flex',
-    minHeight: '450px',
+    minHeight: '75vh',
     maxWidth: '1000px',
     minWidth: '300px',
     flexDirection: 'column',

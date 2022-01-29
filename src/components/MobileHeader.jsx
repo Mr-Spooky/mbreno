@@ -30,7 +30,7 @@ const useStyles = makeStyles({
     position: 'absolute !important',
     top: '0 !important',
     left: '0 !important',
-    width: 'calc(100% - 10px) !important',
+    width: 'calc(100% - 12px) !important',
     maxWidth: 'none !important',
     borderRadius: '5px !important',
     border: '1px solid #F39200',
@@ -82,7 +82,7 @@ function MobileHeader() {
           <StyledIconButton className={classes.close} onClick={handleButtonClick}>
             <Close />
           </StyledIconButton>
-          <img className={classes.logo} src="logo.png" alt="logo" />
+          <img className={classes.logo} src="./images/logos/logo.png" alt="logo" />
           <div className={classes.buttons}>
             <MobileNavButton component={Link} to="/accueil" onClick={handleButtonClick}>
               <Home sx={{ color: '#F39200', marginTop: '-5px' }} />
