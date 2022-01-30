@@ -4,8 +4,8 @@ import { makeStyles } from '@mui/styles';
 import { Typography } from '@mui/material';
 import realizationsDict from './realizationsDict.json';
 import RealizationCard from '../components/RealizationCard';
-import PrimaryButton from '../components/Buttons';
-import StyledDivider from '../components/MuiComponents';
+import PrimaryButton from '../components/generic/Buttons';
+import StyledDivider from '../components/generic/MuiComponents';
 
 const useStyles = makeStyles({
   content: {
@@ -19,9 +19,10 @@ const useStyles = makeStyles({
     textAlign: 'center',
   },
   title: {
-    margin: '20px 0 10px 0 !important',
+    margin: '40px 0 -10px 10px !important',
     fontWeight: 'bold !important',
-    fontSize: '40px !important',
+    fontSize: '20px !important',
+    alignSelf: 'flex-start',
   },
   cardsDiv: {
     display: 'flex',
@@ -29,6 +30,7 @@ const useStyles = makeStyles({
     flexWrap: 'wrap',
     justifyContent: 'center',
     marginBottom: '20px',
+    marginTop: '10px',
   },
   contactDiv: {
     margin: '0 10px 50px 10px',
@@ -40,7 +42,8 @@ function Realizations() {
 
   return (
     <div className={classes.content}>
-      <Typography className={classes.title}>Réalisations</Typography>
+      <Typography className={classes.title}>Nos réalisations</Typography>
+      <StyledDivider flexItem />
       <div className={classes.cardsDiv}>
         {
           Object.keys(realizationsDict).map((key) => {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
 import { Link as MuiLink } from '@mui/material';
-import PrimaryButton, { SecondaryButton } from './Buttons';
+import PrimaryButton, { SecondaryButton } from '../generic/Buttons';
 import MobileHeader from './MobileHeader';
 
 const useStyles = makeStyles({

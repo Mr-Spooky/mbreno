@@ -7,7 +7,7 @@ import { makeStyles } from '@mui/styles';
 import {
   Close, Menu, Home, Collections, Construction,
 } from '@mui/icons-material';
-import PrimaryButton, { MobileNavButton } from './Buttons';
+import PrimaryButton, { MobileNavButton } from '../generic/Buttons';
 
 const StyledIconButton = styled(IconButton)({
   backgroundColor: 'white',

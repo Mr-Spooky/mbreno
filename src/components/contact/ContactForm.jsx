@@ -1,8 +1,8 @@
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import React, { useState } from 'react';
-import PrimaryButton from './Buttons';
-import PrimaryTextfield from './Textfields';
+import PrimaryButton from '../generic/Buttons';
+import PrimaryTextfield from '../generic/Textfields';
 
 const useStyles = makeStyles({
   root: {
