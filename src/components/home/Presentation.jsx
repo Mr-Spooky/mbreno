@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
@@ -14,6 +15,7 @@ const useStyles = makeStyles({
     alignItems: 'center',
     textAlign: 'left',
     paddingLeft: '10px',
+    marginBottom: '150px',
   },
   rootMobile: {
     display: 'flex',
@@ -49,15 +51,8 @@ const useStyles = makeStyles({
   },
 });
 
-function Presentation() {
+function Presentation({ width }) {
   const classes = useStyles();
-  const [width, setWidth] = useState(window.innerWidth);
-
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
-
-  window.addEventListener('resize', handleResize);
 
   return (
     <div className={width < 727 ? classes.rootMobile : classes.root}>
@@ -80,5 +75,9 @@ function Presentation() {
     </div>
   );
 }
+
+Presentation.propTypes = {
+  width: PropTypes.number.isRequired,
+};
 
 export default Presentation;
