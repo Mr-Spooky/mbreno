@@ -11,6 +11,17 @@ const PrimaryButton = styled(Button)({
   },
 });
 
+export const DarkPrimaryButton = styled(Button)({
+  backgroundColor: 'black',
+  textTransform: 'none',
+  fontSize: '16px',
+  color: '#F39200',
+  borderRadius: '5px',
+  '&:hover': {
+    backgroundColor: '#242624',
+  },
+});
+
 export const SecondaryButton = styled(Button)({
   color: 'lightgrey',
   textTransform: 'none',

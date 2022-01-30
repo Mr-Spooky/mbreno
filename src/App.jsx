@@ -3,15 +3,15 @@ import React from 'react';
 import {
   BrowserRouter as Router, Routes, Route, Navigate,
 } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/skeleton/Header';
+import Footer from './components/skeleton/Footer';
 import Realizations from './pages/Realizations';
 import Services from './pages/Services';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Cgu from './pages/Cgu';
 import PrivacyPolicy from './pages/PrivacyPolicy';
-import ScrollToTop from './components/ScrollToTop';
+import ScrollToTop from './components/skeleton/ScrollToTop';
 
 const useStyles = makeStyles({
   root: {

@@ -7,8 +7,8 @@ import {
 import {
   Facebook, Instagram, LinkedIn, Mail, Phone,
 } from '@mui/icons-material';
-import PrimaryButton, { SecondaryButton } from './Buttons';
-import StyledDivider from './MuiComponents';
+import PrimaryButton, { SecondaryButton } from '../generic/Buttons';
+import StyledDivider from '../generic/MuiComponents';
 
 const useStyles = makeStyles({
   footer: {

@@ -4,8 +4,8 @@ import { makeStyles } from '@mui/styles';
 import {
   Phone, Mail, Facebook, Instagram,
 } from '@mui/icons-material';
-import Map from '../components/Map';
-import ContactForm from '../components/ContactForm';
+import Map from '../components/contact/Map';
+import ContactForm from '../components/contact/ContactForm';
 
 const useStyles = makeStyles({
   root: {
