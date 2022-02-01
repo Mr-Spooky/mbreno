@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
 import { Link as MuiLink } from '@mui/material';
@@ -34,15 +35,8 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Header() {
+export default function Header({ width }) {
   const classes = useStyles();
-  const [width, setWidth] = useState(window.innerWidth);
-
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
-
-  window.addEventListener('resize', handleResize);
 
   return (
     <div className={`${classes.header} ${width < 800 ? classes.headerMobile : classes.headerWeb}`}>
@@ -65,3 +59,7 @@ export default function Header() {
     </div>
   );
 }
+
+Header.propTypes = {
+  width: PropTypes.number.isRequired,
+};

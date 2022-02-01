@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import Presentation from '../components/home/Presentation';
@@ -24,15 +25,8 @@ const useStyles = makeStyles({
   },
 });
 
-function Home() {
+function Home({ width }) {
   const classes = useStyles();
-  const [width, setWidth] = useState(window.innerWidth);
-
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
-
-  window.addEventListener('resize', handleResize);
 
   return (
     <div className={classes.content}>
@@ -46,5 +40,9 @@ function Home() {
     </div>
   );
 }
+
+Home.propTypes = {
+  width: PropTypes.number.isRequired,
+};
 
 export default Home;

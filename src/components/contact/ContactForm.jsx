@@ -1,8 +1,14 @@
-import { Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Typography, Link as MuiLink } from '@mui/material';
+import { makeStyles } from '@mui/styles';
+import {
+  Phone, Mail, Facebook, Instagram,
+} from '@mui/icons-material';
+import Lottie from 'react-lottie-player';
 import PrimaryButton from '../generic/Buttons';
 import PrimaryTextfield from '../generic/Textfields';
+import MailLottie from '../../lotties/mail.json';
 
 const useStyles = makeStyles({
   root: {
@@ -17,12 +23,24 @@ const useStyles = makeStyles({
     background: 'linear-gradient(125deg, rgba(243,146,0,1) 0%, rgba(243,146,0,1) 50%, rgba(157,94,0,0.9808298319327731) 100%)',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'flex-start',
+    justifyContent: 'space-around',
     alignItems: 'center',
   },
-  logo: {
-    height: '60px',
-    width: '88px',
+  boxText: {
+    color: 'black',
+    fontWeight: 'bold !important',
+  },
+  socialDiv: {
+    display: 'flex',
+    margin: '5px',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+  },
+  media: {
+    margin: '5px',
+  },
+  icon: {
+    color: 'black',
   },
   contactForm: {
     padding: '25px',
@@ -47,7 +65,7 @@ const useStyles = makeStyles({
   },
 });
 
-function ContactForm() {
+function ContactForm({ width }) {
   const classes = useStyles();
   const [firstName, setFirstName] = useState('');
   const [errorFirstName, setErrorFirstName] = useState(false);
@@ -63,13 +81,6 @@ function ContactForm() {
   const [errorSubject, setErrorSubject] = useState(false);
   const [content, setContent] = useState('');
   const [errorContent, setErrorContent] = useState(false);
-  const [width, setWidth] = useState(window.innerWidth);
-
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
-
-  window.addEventListener('resize', handleResize);
 
   const handleChange = (event) => {
     const { value } = event.target;
@@ -156,15 +167,44 @@ function ContactForm() {
   return (
     <div className={classes.root}>
       <div className={classes.left} style={width < 1017 ? { width: 'calc(75% - 50px)', minWidth: '300px' } : { width: '20%' }}>
-        <Typography sx={{ fontWeight: 'bold', marginBottom: '10px', fontSize: '18px' }}>Nous contacter</Typography>
-        <Typography sx={{ marginBottom: '15px' }}>Laissez-nous vos coordonées et nous vous contacterons.</Typography>
-        <Typography sx={{ fontSize: '13px' }}>
-          Vos informations seront utilisées uniquement pour répondre à votre demande et vous faire parvenir une proposition commerciale
-          si celle-ci est demandée. Vous ne serez pas inscrit à une newsletter et nous ne partagerons jamais vos données.
-        </Typography>
+        <div>
+          <Typography className={classes.boxText} sx={{ marginBottom: '5px' }}>
+            <Phone sx={{ marginBottom: '-7px' }} />
+            &nbsp;&nbsp;07 70 73 69 79
+          </Typography>
+          <Typography className={classes.boxText}>
+            <Mail sx={{ marginBottom: '-7px' }} />
+            &nbsp;&nbsp;mb.reno@orange.fr
+          </Typography>
+        </div>
+        <div className={classes.socialDiv}>
+          <div className={classes.media}>
+            <MuiLink href="https://www.facebook.com/MB-r%C3%A9no-108757878227209" target="_blank">
+              <Facebook className={classes.icon} fontSize="large" />
+            </MuiLink>
+            <Typography className={classes.boxText}>MB réno</Typography>
+          </div>
+          <div className={classes.media}>
+            <MuiLink href="https://www.instagram.com/mb.reno/?hl=fr" target="_blank">
+              <Instagram className={classes.icon} fontSize="large" />
+            </MuiLink>
+            <Typography className={classes.boxText}>@mb.reno</Typography>
+          </div>
+        </div>
+        {
+          width >= 1017 && <Lottie loop animationData={MailLottie} play style={{ marginTop: '-40px' }} />
+        }
+        {
+          width >= 1017 && (
+          <Typography sx={{ fontSize: '11px' }}>
+            Vos informations seront utilisées uniquement pour répondre à votre demande et vous faire parvenir une proposition commerciale
+            si celle-ci est demandée. Vous ne serez pas inscrit à une newsletter et nous ne partagerons jamais vos données.
+          </Typography>
+          )
+        }
       </div>
       <div className={classes.contactForm}>
-        <Typography sx={{ color: 'white', alignSelf: 'flex-start' }}>Message</Typography>
+        <Typography sx={{ color: 'white', alignSelf: 'flex-start' }}>Laissez-nous vos coordonées et nous vous contacterons.</Typography>
         <div className={classes.lineDiv}>
           <PrimaryTextfield
             required
@@ -255,5 +295,9 @@ function ContactForm() {
     </div>
   );
 }
+
+ContactForm.propTypes = {
+  width: PropTypes.number.isRequired,
+};
 
 export default ContactForm;

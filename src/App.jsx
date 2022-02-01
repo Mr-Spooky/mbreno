@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles';
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router, Routes, Route, Navigate,
 } from 'react-router-dom';
@@ -27,11 +27,18 @@ const useStyles = makeStyles({
 
 function App() {
   const classes = useStyles();
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const handleResize = () => {
+    setWidth(window.innerWidth);
+  };
+
+  window.addEventListener('resize', handleResize);
 
   return (
     <Router>
       <div className={classes.root}>
-        <Header />
+        <Header width={width} />
         <ScrollToTop />
         <div className={classes.body}>
           <Routes>
@@ -41,9 +48,9 @@ function App() {
             <Route path="/realisations/*" element={<Navigate replace to="/realisations" />} />
             <Route path="/prestations" element={<Services />} exact />
             <Route path="/prestations/*" element={<Navigate replace to="/prestations" />} />
-            <Route path="/contact" element={<Contact />} exact />
+            <Route path="/contact" element={<Contact width={width} />} exact />
             <Route path="/contact/*" element={<Navigate replace to="/contact" />} />
-            <Route path="/accueil" element={<Home />} />
+            <Route path="/accueil" element={<Home width={width} />} />
             <Route path="*" element={<Navigate replace to="/accueil" />} />
           </Routes>
         </div>
