@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import {
-  MapContainer, TileLayer, Circle, Marker, Popup,
-  useMapEvents,
+  MapContainer, TileLayer, Circle, Marker, Popup, useMapEvents,
 } from 'react-leaflet';
+import { divIcon } from 'leaflet';
+import './marker.css';
+
+const iconMarkup = renderToStaticMarkup(
+  <i className=" fa fa-map-marker-alt fa-3x" />,
+);
+
+const customMarkerIcon = divIcon({
+  html: iconMarkup,
+  iconSize: [26, 35],
+  iconAnchor: [15, 35],
+  popupAnchor: [-2, -35],
+});
 
 function LocationMarker() {
   const [position, setPosition] = useState(null);
@@ -17,7 +30,7 @@ function LocationMarker() {
   });
 
   return position === null ? null : (
-    <Marker position={position}>
+    <Marker position={position} icon={customMarkerIcon}>
       <Popup>Vous êtes ici</Popup>
     </Marker>
   );
