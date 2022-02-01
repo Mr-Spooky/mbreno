@@ -13,6 +13,7 @@ const useStyles = makeStyles({
     bottom: '0',
     backgroundColor: 'black',
     padding: '10px',
+    zIndex: 1000,
   },
 });
 

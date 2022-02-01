@@ -119,6 +119,12 @@ function Contact() {
           </div>
           <div className={classes.box}>
             <Map />
+            <Typography sx={{
+              margin: '-25px 0 0 0', zIndex: 1, backgroundColor: 'white', borderRadius: '15px', padding: '0 23px',
+            }}
+            >
+              Cliquez sur la carte pour connaître votre position
+            </Typography>
           </div>
         </div>
         <ContactForm />

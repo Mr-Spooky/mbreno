@@ -1,8 +1,30 @@
-import React from 'react';
-import { MapContainer, TileLayer, Circle } from 'react-leaflet';
+import React, { useState } from 'react';
+import {
+  MapContainer, TileLayer, Circle, Marker, Popup,
+  useMapEvents,
+} from 'react-leaflet';
+
+function LocationMarker() {
+  const [position, setPosition] = useState(null);
+
+  const map = useMapEvents({
+    click() {
+      map.locate();
+    },
+    locationfound(e) {
+      setPosition(e.latlng);
+    },
+  });
+
+  return position === null ? null : (
+    <Marker position={position}>
+      <Popup>Vous êtes ici</Popup>
+    </Marker>
+  );
+}
 
 function Map() {
-  const center = [46.33786923543195, -0.5820499184627829];
+  const center = [46.323616, -0.585414];
 
   return (
     <MapContainer
@@ -18,6 +40,7 @@ function Map() {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Circle center={center} radius={30000} pathOptions={{ fillColor: '#F39200', color: '#F39200' }} />
+      <LocationMarker />
     </MapContainer>
   );
 }

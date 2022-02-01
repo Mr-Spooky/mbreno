@@ -26,11 +26,15 @@ const useStyles = makeStyles({
     marginBottom: '100px',
   },
   map: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    textAlign: 'center',
     width: '40%',
     height: '400px',
     minWidth: '300px',
     margin: '10px',
-    border: '1px solid black',
     borderRadius: '15px',
   },
   right: {
@@ -60,6 +64,12 @@ function Advantages({ width }) {
     <div className={width < 727 ? classes.rootMobile : classes.root}>
       <div className={classes.map}>
         <Map />
+        <Typography sx={{
+          margin: '-25px 0 0 0', zIndex: 1, backgroundColor: 'white', padding: '0 10px', width: '100%',
+        }}
+        >
+          Cliquez sur la carte pour connaître votre position
+        </Typography>
       </div>
       <div className={classes.right}>
         <div style={{ marginBottom: '10px' }}>
