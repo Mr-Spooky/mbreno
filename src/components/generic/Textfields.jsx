@@ -6,8 +6,8 @@ const PrimaryTextfieldStyled = styled(TextField)({
   marginTop: '12px',
   minWidth: '300px',
   '& :-webkit-autofill': {
-    '-webkit-transition': 'color 9999s ease-out, background-color 9999s ease-out',
-    '-webkit-transition-delay': '9999s',
+    WebkitTransition: 'color 9999s ease-out, background-color 9999s ease-out',
+    WebkitTransitionDelay: '9999s',
   },
   '& .MuiInputBase-root': {
     color: 'white',

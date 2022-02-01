@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Cgu from './pages/Cgu';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import ScrollToTop from './components/skeleton/ScrollToTop';
+import Cookies from './components/skeleton/Cookies';
 
 const useStyles = makeStyles({
   root: {
@@ -47,6 +48,7 @@ function App() {
           </Routes>
         </div>
         <Footer />
+        <Cookies />
       </div>
     </Router>
   );

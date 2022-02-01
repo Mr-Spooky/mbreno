@@ -26,7 +26,7 @@ function RealizationCard({
     <>
       <Card
         sx={{
-          width: '300px', margin: '10px', border: '1px solid black', cursor: 'pointer',
+          width: '300px', margin: '10px', cursor: 'pointer', borderRadius: '15px',
         }}
         onClick={() => setOpen(true)}
       >
@@ -38,18 +38,30 @@ function RealizationCard({
       </Card>
       <Dialog classes={{ paper: classes.dialog }} open={open} onClose={() => setOpen(false)}>
         <DialogContent>
-          <Carousel showArrows infiniteLoop dynamicHeight showThumbs={false} showStatus={false}>
-            <div>
-              <img className={classes.images} src={image} alt="réalisation" />
-            </div>
-            {
-              images.length !== 0 && images.map((img) => (
-                <div key={img}>
-                  <img className={classes.images} src={img} alt="réalisation" />
-                </div>
-              ))
-            }
-          </Carousel>
+          {
+            images.length !== 0
+              ? (
+                <Carousel showArrows infiniteLoop dynamicHeight showThumbs={false} showStatus={false}>
+                  <div>
+                    <img className={classes.images} src={image} alt="réalisation" />
+                  </div>
+                  {
+                    images.length !== 0 && images.map((img) => (
+                      <div key={img}>
+                        <img className={classes.images} src={img} alt="réalisation" />
+                      </div>
+                    ))
+                  }
+                </Carousel>
+              )
+              : (
+                <Carousel showArrows infiniteLoop dynamicHeight showThumbs={false} showStatus={false}>
+                  <div>
+                    <img className={classes.images} src={image} alt="réalisation" />
+                  </div>
+                </Carousel>
+              )
+          }
         </DialogContent>
       </Dialog>
     </>
@@ -60,7 +72,11 @@ RealizationCard.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
-  images: PropTypes.instanceOf(Array).isRequired,
+  images: PropTypes.instanceOf(Array),
+};
+
+RealizationCard.defaultProps = {
+  images: [],
 };
 
 export default RealizationCard;

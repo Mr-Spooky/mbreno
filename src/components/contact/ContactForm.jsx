@@ -156,14 +156,12 @@ function ContactForm() {
   return (
     <div className={classes.root}>
       <div className={classes.left} style={width < 1017 ? { width: 'calc(75% - 50px)', minWidth: '300px' } : { width: '20%' }}>
-        <div style={{
-          backgroundColor: 'black', width: '100%', padding: '20px 0', marginBottom: '20px',
-        }}
-        >
-          <img className={`${classes.logo} ${width < 800 && classes.logoMobile}`} src="./images/logos/logo.png" alt="logo" />
-        </div>
         <Typography sx={{ fontWeight: 'bold', marginBottom: '10px', fontSize: '18px' }}>Nous contacter</Typography>
-        <Typography>Laissez-nous vos coordonées et nous vous contacterons.</Typography>
+        <Typography sx={{ marginBottom: '15px' }}>Laissez-nous vos coordonées et nous vous contacterons.</Typography>
+        <Typography sx={{ fontSize: '13px' }}>
+          Vos informations seront utilisées uniquement pour répondre à votre demande et vous faire parvenir une proposition commerciale
+          si celle-ci est demandée. Vous ne serez pas inscrit à une newsletter et nous ne partagerons jamais vos données.
+        </Typography>
       </div>
       <div className={classes.contactForm}>
         <Typography sx={{ color: 'white', alignSelf: 'flex-start' }}>Message</Typography>
