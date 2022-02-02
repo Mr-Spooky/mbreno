@@ -167,33 +167,35 @@ function ContactForm({ width }) {
   return (
     <div className={classes.root}>
       <div className={classes.left} style={width < 1017 ? { width: 'calc(75% - 50px)', minWidth: '300px' } : { width: '20%' }}>
-        <div>
-          <Typography className={classes.boxText} sx={{ marginBottom: '5px' }}>
-            <Phone sx={{ marginBottom: '-7px' }} />
-            &nbsp;&nbsp;07 70 73 69 79
-          </Typography>
-          <Typography className={classes.boxText}>
-            <Mail sx={{ marginBottom: '-7px' }} />
-            &nbsp;&nbsp;mb.reno@orange.fr
-          </Typography>
-        </div>
-        <div className={classes.socialDiv}>
-          <div className={classes.media}>
-            <MuiLink href="https://www.facebook.com/MB-r%C3%A9no-108757878227209" target="_blank">
-              <Facebook className={classes.icon} fontSize="large" />
-            </MuiLink>
-            <Typography className={classes.boxText}>MB réno</Typography>
+        <div style={width < 1017 ? { display: 'flex', justifyContent: 'space-around', alignItems: 'center' } : { }}>
+          <div>
+            <div>
+              <Typography className={classes.boxText} sx={{ marginBottom: '5px' }}>
+                <Phone sx={{ marginBottom: '-7px' }} />
+                &nbsp;&nbsp;07 70 73 69 79
+              </Typography>
+              <Typography className={classes.boxText}>
+                <Mail sx={{ marginBottom: '-7px' }} />
+                &nbsp;&nbsp;mb.reno@orange.fr
+              </Typography>
+            </div>
+            <div className={classes.socialDiv}>
+              <div className={classes.media}>
+                <MuiLink href="https://www.facebook.com/MB-r%C3%A9no-108757878227209" target="_blank">
+                  <Facebook className={classes.icon} fontSize="large" />
+                </MuiLink>
+                <Typography className={classes.boxText}>MB réno</Typography>
+              </div>
+              <div className={classes.media}>
+                <MuiLink href="https://www.instagram.com/mb.reno/?hl=fr" target="_blank">
+                  <Instagram className={classes.icon} fontSize="large" />
+                </MuiLink>
+                <Typography className={classes.boxText}>@mb.reno</Typography>
+              </div>
+            </div>
           </div>
-          <div className={classes.media}>
-            <MuiLink href="https://www.instagram.com/mb.reno/?hl=fr" target="_blank">
-              <Instagram className={classes.icon} fontSize="large" />
-            </MuiLink>
-            <Typography className={classes.boxText}>@mb.reno</Typography>
-          </div>
+          <Lottie loop animationData={MailLottie} play style={width < 1017 ? { width: '40%', margin: '-40px -20px' } : { marginTop: '-40px' }} />
         </div>
-        {
-          width >= 1017 && <Lottie loop animationData={MailLottie} play style={{ marginTop: '-40px' }} />
-        }
         {
           width >= 1017 && (
           <Typography sx={{ fontSize: '11px' }}>
