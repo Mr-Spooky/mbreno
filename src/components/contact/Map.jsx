@@ -37,6 +37,7 @@ function LocationMarker() {
     },
     locationfound(e) {
       setPosition(e.latlng);
+      map.flyTo(e.latlng, map.getZoom());
     },
   });
 

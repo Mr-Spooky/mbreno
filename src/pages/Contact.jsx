@@ -91,7 +91,7 @@ function Contact({ width }) {
         <div className={width < 727 ? classes.topDivMobile : classes.topDiv}>
           <div className={classes.titleDiv}>
             <Typography className={classes.title}>Nous sommes à votre écoute</Typography>
-            <div>
+            <div style={width < 727 ? { width: '100%' } : {}}>
               <Typography className={classes.title2}>Du lundi au vendredi</Typography>
               <Typography className={classes.title2} sx={{ marginBottom: '10px' }}>De 8h à 19h</Typography>
             </div>
