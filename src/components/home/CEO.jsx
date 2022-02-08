@@ -44,6 +44,7 @@ const useStyles = makeStyles({
     minWidth: '300px',
     width: '40%',
     height: 'auto',
+    borderRadius: '15px',
   },
 });
 
