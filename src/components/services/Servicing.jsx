@@ -29,11 +29,11 @@ function SecondWork() {
       <div className={classes.services}>
         <div className={classes.service}>
           <ArrowRight />
-          <Typography className={classes.serviceTypo}>Entretien de façade</Typography>
+          <Typography className={classes.serviceTypo}>Entretien / Nettoyage de façade</Typography>
         </div>
         <div className={classes.service}>
           <ArrowRight />
-          <Typography className={classes.serviceTypo}>Entretien de toiture</Typography>
+          <Typography className={classes.serviceTypo}>Entretien / Nettoyage de toiture</Typography>
         </div>
         <div className={classes.service}>
           <ArrowRight />

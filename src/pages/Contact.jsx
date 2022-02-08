@@ -16,7 +16,7 @@ const useStyles = makeStyles({
     paddingTop: '20px',
     display: 'flex',
     minHeight: '75vh',
-    maxWidth: '1000px',
+    maxWidth: '1200px',
     minWidth: '300px',
     flexDirection: 'column',
     justifyContent: 'flex-start',

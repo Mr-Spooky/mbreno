@@ -31,7 +31,7 @@ function Home({ width }) {
   return (
     <div className={classes.content}>
       <Presentation width={width} />
-      <Typography sx={{ alignSelf: 'flex-start', margin: '0 0 -10px 10px', fontWeight: 'bold' }}>Un ouvrier qualifié</Typography>
+      <Typography sx={{ alignSelf: 'flex-start', margin: '75px 0 -10px 10px', fontWeight: 'bold' }}>Un ouvrier qualifié</Typography>
       <StyledDivider flexItem />
       <CEO width={width} />
       <Typography sx={{ alignSelf: 'flex-start', margin: '0 0 -10px 10px', fontWeight: 'bold' }}>Un avantage incontournable</Typography>

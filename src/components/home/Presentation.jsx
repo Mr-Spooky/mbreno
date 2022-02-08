@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     textAlign: 'left',
     paddingLeft: '10px',
     paddingTop: '75px',
-    marginBottom: '250px',
+    marginBottom: '200px',
   },
   rootMobile: {
     display: 'flex',

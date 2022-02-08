@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     display: 'flex',
     width: '100%',
     minHeight: '75vh',
-    maxWidth: '1000px',
+    maxWidth: '1200px',
     minWidth: '300px',
     flexDirection: 'column',
     justifyContent: 'flex-start',
@@ -28,10 +28,11 @@ const useStyles = makeStyles({
     alignSelf: 'flex-start',
   },
   quote: {
+    width: '100%',
     display: 'flex',
     flexWrap: 'wrap',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     marginBottom: '100px',
   },
 });
