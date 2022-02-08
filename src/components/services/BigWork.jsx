@@ -14,7 +14,6 @@ const useStyles = makeStyles({
   left: {
     width: '60%',
     minWidth: '350px',
-    marginTop: '10px',
   },
   services: {
     margin: '10px 0 20px 0',
