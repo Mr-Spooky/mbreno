@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import Presentation from '../components/home/Presentation';
@@ -10,7 +11,7 @@ const useStyles = makeStyles({
   content: {
     display: 'flex',
     minHeight: '75vh',
-    maxWidth: '1000px',
+    maxWidth: '1200px',
     minWidth: '300px',
     flexDirection: 'column',
     justifyContent: 'flex-start',
@@ -24,20 +25,13 @@ const useStyles = makeStyles({
   },
 });
 
-function Home() {
+function Home({ width }) {
   const classes = useStyles();
-  const [width, setWidth] = useState(window.innerWidth);
-
-  const handleResize = () => {
-    setWidth(window.innerWidth);
-  };
-
-  window.addEventListener('resize', handleResize);
 
   return (
     <div className={classes.content}>
       <Presentation width={width} />
-      <Typography sx={{ alignSelf: 'flex-start', margin: '0 0 -10px 10px', fontWeight: 'bold' }}>Un ouvrier qualifié</Typography>
+      <Typography sx={{ alignSelf: 'flex-start', margin: '75px 0 -10px 10px', fontWeight: 'bold' }}>Un ouvrier qualifié</Typography>
       <StyledDivider flexItem />
       <CEO width={width} />
       <Typography sx={{ alignSelf: 'flex-start', margin: '0 0 -10px 10px', fontWeight: 'bold' }}>Un avantage incontournable</Typography>
@@ -46,5 +40,9 @@ function Home() {
     </div>
   );
 }
+
+Home.propTypes = {
+  width: PropTypes.number.isRequired,
+};
 
 export default Home;

@@ -42,8 +42,10 @@ const useStyles = makeStyles({
   },
   img: {
     minWidth: '300px',
+    maxWidth: '400px',
     width: '40%',
     height: 'auto',
+    borderRadius: '15px',
   },
 });
 

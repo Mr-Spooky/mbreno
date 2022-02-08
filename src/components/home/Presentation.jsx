@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import Lottie from 'react-lottie-player';
-import LottieHouse from '../../lotties/house.json';
 import PrimaryButton, { DarkPrimaryButton } from '../generic/Buttons';
 
 const useStyles = makeStyles({
@@ -15,7 +13,8 @@ const useStyles = makeStyles({
     alignItems: 'center',
     textAlign: 'left',
     paddingLeft: '10px',
-    marginBottom: '150px',
+    paddingTop: '75px',
+    marginBottom: '200px',
   },
   rootMobile: {
     display: 'flex',
@@ -46,8 +45,13 @@ const useStyles = makeStyles({
     marginTop: '20px',
   },
   lottieDiv: {
-    width: '50%',
+    width: '40%',
     minWidth: '300px',
+  },
+  img: {
+    width: '100%',
+    height: 'auto',
+    marginTop: '20px',
   },
 });
 
@@ -70,7 +74,7 @@ function Presentation({ width }) {
         </div>
       </div>
       <div className={classes.lottieDiv}>
-        <Lottie loop animationData={LottieHouse} play style={{ width: '100%', marginTop: '-20px !important' }} />
+        <img className={classes.img} src="./images/presentation/card.png" alt="MB Réno carte de visite" />
       </div>
     </div>
   );

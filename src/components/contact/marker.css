@@ -1,0 +1,19 @@
+.leaflet-div-icon {
+  background: transparent;
+  border: none;
+}
+
+.icon {
+  color: #F39200;
+}
+
+.leaflet-tooltip {
+  background-color: black;
+  border: 1px solid black;
+  color: #F39200;
+  padding: 2px 8px;
+}
+
+.leaflet-tooltip-bottom:before {
+  border-bottom-color: black;
+}

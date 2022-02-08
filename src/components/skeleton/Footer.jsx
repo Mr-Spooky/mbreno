@@ -138,7 +138,7 @@ function Footer() {
         </div>
         <StyledDivider flexItem />
         <div className={classes.devis}>
-          <Typography className={classes.footerText}>Demande de devis gratuite dans un rayon de 30km autour de l&apos;entreprise.</Typography>
+          <Typography className={classes.footerText}>Devis gratuit dans un rayon de 30km autour de l&apos;entreprise.</Typography>
           <PrimaryButton style={{ minWidth: '140px' }} component={Link} to="/contact">En savoir plus</PrimaryButton>
         </div>
         <StyledDivider flexItem />

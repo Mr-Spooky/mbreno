@@ -10,7 +10,7 @@ const PrimaryTextfieldStyled = styled(TextField)({
     WebkitTransitionDelay: '9999s',
   },
   '& .MuiInputBase-root': {
-    color: 'white',
+    color: '#F39200',
   },
   '& label': {
     color: 'white',

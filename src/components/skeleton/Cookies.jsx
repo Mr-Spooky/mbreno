@@ -8,11 +8,16 @@ const useStyles = makeStyles({
     width: '100%',
     display: 'flex',
     justifyContent: 'space-around',
-    flexWrap: 'wrap',
+    alignItems: 'center',
     position: 'fixed',
     bottom: '0',
     backgroundColor: 'black',
     padding: '10px',
+    zIndex: 1000,
+  },
+  button: {
+    height: '40px',
+    marginRight: '20px !important',
   },
 });
 
@@ -31,7 +36,7 @@ function Cookies() {
           des effets potentiellements négatifs pour le bon fonctionnement du site.
         </Typography>
       </div>
-      <PrimaryButton variant="filled" onClick={() => setOpen(false)}>OK</PrimaryButton>
+      <PrimaryButton className={classes.button} variant="filled" onClick={() => setOpen(false)}>OK</PrimaryButton>
     </div>
   );
 }
