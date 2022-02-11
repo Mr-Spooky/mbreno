@@ -29,15 +29,19 @@ function SecondWork() {
       <div className={classes.services}>
         <div className={classes.service}>
           <ArrowRight />
-          <Typography className={classes.serviceTypo}>Entretien / Nettoyage de façade</Typography>
+          <Typography className={classes.serviceTypo}>Nettoyer des façades</Typography>
         </div>
         <div className={classes.service}>
           <ArrowRight />
-          <Typography className={classes.serviceTypo}>Entretien / Nettoyage de toiture</Typography>
+          <Typography className={classes.serviceTypo}>Entretenir / Nettoyer des toitures</Typography>
         </div>
         <div className={classes.service}>
           <ArrowRight />
-          <Typography className={classes.serviceTypo}>Produit anti-mousse</Typography>
+          <Typography className={classes.serviceTypo}>Appliquer du produit anti-mousse</Typography>
+        </div>
+        <div className={classes.service}>
+          <ArrowRight />
+          <Typography className={classes.serviceTypo}>Remettre en état après des travaux ou sinistres</Typography>
         </div>
       </div>
       <Typography sx={{ alignSelf: 'flex-start', textAlign: 'left', margin: '0 20px 100px 20px' }}>

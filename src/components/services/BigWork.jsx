@@ -55,6 +55,10 @@ function BigWork() {
           </div>
           <div className={classes.service}>
             <ArrowRight />
+            <Typography className={classes.serviceTypo}>Construire des murs en parpaing ou en pierre</Typography>
+          </div>
+          <div className={classes.service}>
+            <ArrowRight />
             <Typography className={classes.serviceTypo}>Ouvrir des murs porteurs</Typography>
           </div>
           <div className={classes.service}>
@@ -64,6 +68,22 @@ function BigWork() {
           <div className={classes.service}>
             <ArrowRight />
             <Typography className={classes.serviceTypo}>Poser des cloisons (plaques de plâtre ou autres matériaux)</Typography>
+          </div>
+          <div className={classes.service}>
+            <ArrowRight />
+            <Typography className={classes.serviceTypo}>Couler des châpes intérieures et extérieures</Typography>
+          </div>
+          <div className={classes.service}>
+            <ArrowRight />
+            <Typography className={classes.serviceTypo}>Ragréage de sols</Typography>
+          </div>
+          <div className={classes.service}>
+            <ArrowRight />
+            <Typography className={classes.serviceTypo}>Travaux de démolition</Typography>
+          </div>
+          <div className={classes.service}>
+            <ArrowRight />
+            <Typography className={classes.serviceTypo}>Reprise de maçonnerie</Typography>
           </div>
         </div>
         <Typography sx={{ alignSelf: 'flex-start', textAlign: 'left', margin: '0 20px 10px 20px' }}>

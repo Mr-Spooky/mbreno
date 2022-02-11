@@ -66,6 +66,18 @@ function SecondWork() {
             <ArrowRight />
             <Typography className={classes.serviceTypo}>Réaliser les finitions</Typography>
           </div>
+          <div className={classes.service}>
+            <ArrowRight />
+            <Typography className={classes.serviceTypo}>Déposer d&apos;anciens revêtements</Typography>
+          </div>
+          <div className={classes.service}>
+            <ArrowRight />
+            <Typography className={classes.serviceTypo}>Préparer des supports</Typography>
+          </div>
+          <div className={classes.service}>
+            <ArrowRight />
+            <Typography className={classes.serviceTypo}>Rejointoyer des murs en pierre</Typography>
+          </div>
         </div>
         <Typography sx={{ alignSelf: 'flex-start', textAlign: 'left', margin: '0 20px 10px 20px' }}>
           Faites appel à un artisan qualifié qui pourra vous conseiller et réaliser tous vos projets.
