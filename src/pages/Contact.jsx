@@ -74,6 +74,7 @@ const useStyles = makeStyles({
     fontSize: '16px !important',
   },
   background: {
+    marginTop: '100px',
     position: 'relative',
     width: '100%',
     backgroundColor: 'black',

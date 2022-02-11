@@ -194,7 +194,11 @@ function ContactForm({ width }) {
               </div>
             </div>
           </div>
-          <Lottie loop animationData={MailLottie} play style={width < 1017 ? { width: '40%', margin: '-40px -20px' } : { marginTop: '-40px' }} />
+          {
+            width >= 700 && (
+              <Lottie loop animationData={MailLottie} play style={width < 1017 ? { width: '40%', margin: '-40px -20px' } : { marginTop: '-40px' }} />
+            )
+          }
         </div>
         {
           width >= 1017 && (
