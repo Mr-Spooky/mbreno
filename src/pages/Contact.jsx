@@ -105,7 +105,7 @@ function Contact({ width }) {
           <div className={classes.mapDiv}>
             <Map />
             <Typography sx={{
-              margin: '-25px 0 0 0', zIndex: 1, backgroundColor: 'white', padding: '0 10px', width: '100%', textAlign: 'center',
+              margin: '-23px 0 0 0', zIndex: 1, backgroundColor: 'white', padding: '0 10px', width: '100%', textAlign: 'center',
             }}
             >
               Cliquez sur la carte pour connaître votre position
