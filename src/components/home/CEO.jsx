@@ -6,7 +6,8 @@ import { ArrowRight } from '@mui/icons-material';
 
 const useStyles = makeStyles({
   root: {
-    width: '100%',
+    padding: '0 10px',
+    width: 'calc(100%-10px)',
     display: 'flex',
     justifyContent: 'space-between',
     textAlign: 'left',
@@ -28,7 +29,6 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     width: '45%',
     minWidth: '300px',
-    paddingLeft: '20px',
   },
   specialities: {
     margin: '10px 0 40px 0',
