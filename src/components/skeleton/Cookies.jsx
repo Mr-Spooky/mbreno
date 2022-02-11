@@ -30,8 +30,10 @@ function Cookies() {
   return (
     <div className={classes.root}>
       <div>
-        <Typography sx={{ color: 'white' }}>Ce site n&apos;utilise que des cookies obligatoires à son bon fonctionnement.</Typography>
-        <Typography sx={{ color: 'white' }}>
+        <Typography sx={{ color: 'white', fontSize: '12px' }}>
+          Ce site n&apos;utilise que des cookies obligatoires à son bon fonctionnement.
+        </Typography>
+        <Typography sx={{ color: 'white', fontSize: '12px' }}>
           Vous pouvez tout de même les bloquer depuis les réglages de votre navigateur, mais cela pourrait causer
           des effets potentiellements négatifs pour le bon fonctionnement du site.
         </Typography>

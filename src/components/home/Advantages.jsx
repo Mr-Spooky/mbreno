@@ -65,7 +65,7 @@ function Advantages({ width }) {
       <div className={classes.map}>
         <Map />
         <Typography sx={{
-          margin: '-25px 0 0 0', zIndex: 1, backgroundColor: 'white', padding: '0 10px', width: '100%',
+          margin: '-23px 0 0 0', zIndex: 1, backgroundColor: 'white', padding: '0 10px', width: '100%',
         }}
         >
           Cliquez sur la carte pour connaître votre position
