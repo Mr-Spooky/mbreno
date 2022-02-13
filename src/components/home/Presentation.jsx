@@ -74,7 +74,7 @@ function Presentation({ width }) {
         </div>
       </div>
       <div className={classes.lottieDiv}>
-        <img className={classes.img} src="./images/presentation/card.png" alt="MB Réno carte de visite" />
+        <img className={classes.img} src="./images/presentation/visit-card.png" alt="MB Réno carte de visite" />
       </div>
     </div>
   );

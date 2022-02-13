@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles';
 import React, { useState } from 'react';
 import {
-  BrowserRouter as Router, Routes, Route, Navigate,
+  HashRouter as Router, Routes, Route, Navigate,
 } from 'react-router-dom';
 import Header from './components/skeleton/Header';
 import Footer from './components/skeleton/Footer';
