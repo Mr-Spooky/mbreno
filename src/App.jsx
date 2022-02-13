@@ -36,7 +36,7 @@ function App() {
   window.addEventListener('resize', handleResize);
 
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <div className={classes.root}>
         <Header width={width} />
         <ScrollToTop />
